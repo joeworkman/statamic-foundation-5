@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="twelve columns">
+    <div id="orbitDemoWithCaptions">
+        <!-- supports sort_by="field|random" sort_dir="asc|desc" first="true" last="true" -->
+        {{ slider sort_by="caption" }}
+          <img src="{{ img }}" alt="{{ caption }}" data-caption="#caption{{index}}" />
+          <span class="orbit-caption" id="caption{{index}}">{{ caption }}</span>
+        {{ /slider }}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <ul class="block-grid five-up mobile-two-up">
+
+      {{ gallery_images sort_by="random" limit="8" }}
+        <li><img src="{{ img }}"></li>
+      {{ /gallery_images }}
+    </ul>
+</div>

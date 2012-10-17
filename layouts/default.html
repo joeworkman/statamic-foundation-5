@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+  <title>{{ _site_name }}</title>
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="{{ theme:css }}" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+  <script src="{{ theme:js src='modernizr.foundation'}}"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <div class="contain-to-grid">
+    {{ theme:partial src='navigation/top-bar' }}
+  </div>
+  <br>
+  
+  {{ if ! hide_header_image }}
+  <div class="row">
+    <div id="orbitDemo">
+      <img src="http://placehold.it/1000x400&text=[img 1]" />
+      <img src="http://placehold.it/1000x400&text=[img 2]" />
+      <img src="http://placehold.it/1000x400&text=[img 3]" />
+      <img src="http://placehold.it/1000x400&text=[img 4]" />
+    </div>
+  </div>
+  {{ endif }}
+  
+  {{ layout_content }}
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="{{ theme:js src="jquery" }}"></script>
+  <script src="{{ theme:js src="foundation.min" }}"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="{{ theme:js src="app" }}"></script>
+</body>
+</html>
