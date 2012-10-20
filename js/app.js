@@ -26,9 +26,9 @@
     $.fn.foundationTabs             ? $doc.foundationTabs() : null;
     
   
-  
-    $("#orbitDemo").orbit();
-    $("#orbitDemoWithCaptions").orbit({
+    
+    $("#partialSlider").orbit();
+    $("#partialSliderWithCaption").orbit({
       captions: true
     });
 

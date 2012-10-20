@@ -5,6 +5,6 @@ $(function(){
     pause: 2500,
   });
   $(window).load(function() {
-       $('#orbitDemo').orbit();
+       $('#partialSlider').orbit();
    });
 });
