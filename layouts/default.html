@@ -30,17 +30,7 @@
     {{ theme:partial src='navigation/{_nav_type}' }}
   </div>
   <br>
-  
-  {{ if ! hide_header_image }}
-  <div class="row">
-    <div id="orbitDemo">
-      <img src="http://placehold.it/1000x400&text=[img 1]" />
-      <img src="http://placehold.it/1000x400&text=[img 2]" />
-      <img src="http://placehold.it/1000x400&text=[img 3]" />
-      <img src="http://placehold.it/1000x400&text=[img 4]" />
-    </div>
-  </div>
-  {{ endif }}
+  {{ theme:partial src='slider' colomns="twelve" }}
   
   {{ layout_content }}
   
