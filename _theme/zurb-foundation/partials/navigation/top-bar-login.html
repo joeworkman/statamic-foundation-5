@@ -11,10 +11,10 @@
       {{ if logged_in }}
       
       {{ else }}
-        {{ loginform:zurb_modal }}
+        {{ form:modal_login }}
           {{ div }}
           <li>{{ button }}</li>
-        {{ /loginform:zurb_modal }}
+        {{ /form:modal_login }}
       {{ endif }}
     </ul>
   </section>
