@@ -20,8 +20,6 @@
   <div class="contain-to-grid">
     {{ theme:partial src='navigation/{_nav_type}' }}
   </div>
-  <br>
-  {{ theme:partial src='slider' columns="twelve" }}
   
   {{ layout_content }}
   
@@ -32,5 +30,8 @@
   
   <!-- Initialize JS Plugins -->
   <script src="{{ theme:js src="app" }}"></script>
+
+  <!-- Loading own JS Stuff -->
+  <script src="{{ theme:js src="demo" }}"></script>
 </body>
 </html>
