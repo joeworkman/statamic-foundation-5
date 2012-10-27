@@ -23,14 +23,14 @@ class Plugin_form extends Plugin {
     $html = '<form class="" method="post" action="/TRIGGER/member/login">';
       $html .= '<input type="hidden" name="return" value="'.$return.'">';
       $html .= '<header class="row">';
-        $html .= '<div class="twelve columns inline">';
+        $html .= '<div class="twelve columns">';
           $html .= '<h1>'.$title.'</h1>';
           $html .= '<hr>';
         $html .= '</div>';
       $html .= '</header>';
       $html .= '<div class="row">';
         $html .= '<div class="three columns">';
-          $html .= '<label for="loginuser" class="">Username</label>';
+          $html .= '<label for="loginuser" class="right inline">Username</label>';
         $html .= '</div>';
         $html .= '<div class="nine columns">';
           $html .= '<input id="loginuser" type="text" placeholder="username" class="">';
@@ -38,7 +38,7 @@ class Plugin_form extends Plugin {
       $html .= '</div>';
       $html .= '<div class="row">';
         $html .= '<div class="three columns">';
-          $html .= '<label for="loginpass" class="">Password</label>';
+          $html .= '<label for="loginpass" class="right inline">Password</label>';
         $html .= '</div>';
         $html .= '<div class="nine columns">';
           $html .= '<input id="loginpass" type="text" placeholder="******">'; 

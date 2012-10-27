@@ -1,10 +1,10 @@
 // You custom settings file to override Foundation defaults
-@import "colors";
+@import "./addons/colors";
 @import "settings";
 
 // Comment out this import if you are customizing you imports below
 @import "foundation";
-@import "_addons/niceForm";
+@import "./addons/niceForm";
 
 // ----------------------------------------
 // Import specific parts of Foundation by commenting the import "foundation"
