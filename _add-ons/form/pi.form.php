@@ -8,16 +8,6 @@ class Plugin_form extends Plugin {
     'author_url' => 'http://maxx.st'
   );
 
-  /**
-   * returns a Form where you can login
-   */
-  public function index(){
-    
-  }
-
-  
-
-
   private function _loginForm($return='/', $title="Please Login"){
 
     $html = '<form class="" method="post" action="/TRIGGER/member/login">';
