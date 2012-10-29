@@ -53,6 +53,7 @@ class Plugin_form extends Plugin {
 
     $div = '<div id="loginModal" class="reveal-modal small">';
       $div .= $this->_loginForm($return);
+      $div .= '<a class="close-reveal-modal">&#215;</a>';
     $div .= "</div>";
 
     return array('button' => $btn, 'div' => $div);
