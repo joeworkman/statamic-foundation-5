@@ -17,6 +17,7 @@ do
   theme_base=`basename $theme`
   ln -s "$theme" "$STATAMIC/_themes/$theme_base"
   ln -s $(pwd)/_config/$theme_base.yaml $STATAMIC/_config/$theme_base.yaml
+  ln -s $(pwd)/_config/routes.yaml $STATAMIC/_config/routes.yaml
 done;
 
 for plugin in $(pwd)/_add-ons/*
