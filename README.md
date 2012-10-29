@@ -13,11 +13,15 @@ then download this starterkit and you should be ready to go
 
 
 ### Include theme in statamic
-I'm on a Mac so here is what I did: 
+I'm on a Mac so I tried to make you that Symlinkscript `symlink.sh`
 
-    ln -s path/to/folder/statamic-foundation /path/to/statamic/_themes/zurb-foundation
-    
-.. to create a symlink to the Theme
+1. Open your Terminal & go to your theme folder cd path/to/theme
+2. type sh symlink.sh
+3. type in the path to your statamic-folder (on Mac Drag&Drop works)
+4. set your theme to zurb-foundation
+5. Enjoy.
+
+
 
 ### Rename theme
 The name of the theme is foundation to rename the theme:
@@ -27,6 +31,9 @@ The name of the theme is foundation to rename the theme:
 ## Included Templates
 ### default
 It's like the london-wild default starting pages
+
+### demo
+all Templates from http://foundation.zurb.com/templates.php -> I want to patialize them soon
 
 ## Included Partials
 ### Navigation
