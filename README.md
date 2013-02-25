@@ -1,3 +1,5 @@
+.. waiting for Foundation 4 to restart !! ..
+
 # Statamic Theme for [Zurb Foundation](http://foundation.zurb.com)
 It's still in development (pre alpha stadium) so use it on your own risk!
 
