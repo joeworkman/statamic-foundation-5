@@ -1,17 +1,12 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
-
 # TEAM
-
-    Gareth Redfern -- @garethredfern
+    Maximilian Stauss - @mx_st
 
 # THANKS
 
+    Statarkers Crew
     Everyone who uses this template!
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     Normalize.css, jQuery
-
-    Source: https://github.com/statamicthemes/statarkers-theme
