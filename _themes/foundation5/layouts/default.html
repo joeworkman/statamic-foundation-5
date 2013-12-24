@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="{{ theme:css }}" />
+    <script src="{{ theme:asset src="bower_components/modernizr/modernizr.js" }}"></script>
+  </head>
+  <body>
+
+    {{ theme:partial src="nav-bar" }}
+
+    {{ layout_content }}
+    
+
+    <script src="{{ theme:asset src="bower_components/jquery/jquery.js" }}"></script>
+    <script src="{{ theme:asset src="bower_components/foundation/js/foundation.min.js" }}"></script>
+    {{ if include_maps }}
+      {{ location:start_maps }}
+    {{ endif }}
+    <script>
+      $(document).foundation();
+
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+    
+  </body>
+</html>

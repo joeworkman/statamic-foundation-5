@@ -1,0 +1,25 @@
+  <div class="row">
+    <article class="large-12 columns">
+      <h1>{{ title }}</h1>
+      <p>
+        {{ content }}
+      </p>
+    </article>
+  </div>
+
+  {{ entries:listing show_future="yes" show_past="no" folder="calendar" sort_dir="asc" }}
+
+  <div class="row">
+    <div class="large-12 columns">
+    {{ if no_results }}
+      <div class="panel">
+        <h1>No events on the horizon.</h1>
+      </div>
+    {{ else }}
+      <hr>
+      <h3>{{ title }} <small>{{ date format="j. M Y" }}</small></h3>
+      {{ content }}
+    {{ endif }}
+    </div>
+  </div>
+  {{ /entries:listing }}

@@ -1,0 +1,25 @@
+<aside class="large-3 columns">
+  {{ if {nav:count from="{segment_1}"} }}
+    <h5>Sub-Navigation</h5>
+    <ul class="side-nav">
+      {{ nav from="{segment_1}" }}
+        <li><a href="{{url}}">{{title}}</a></li>
+      {{/nav}}
+    </ul>
+    <hr>
+  {{ endif }}
+
+  <h6>Blog Categories</h6>
+  <ul class="side-nav">
+    {{ taxonomy:listing folder="blog" type="categories" sort_by="name" sort_dir="asc" }}
+      <li><a href="{{ url }}">{{ name }}</a></li>
+    {{ /taxonomy:listing }}
+  </ul>
+
+  <div class="panel">
+    <h5>Featured</h5>
+    <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+    <a href="#">Read More &rarr;</a>
+  </div>
+
+</aside>
