@@ -2,23 +2,27 @@
   <div class="large-12 columns">
     <div class="nav-bar right">
      <ul class="button-group">
-        {{ nav from="/" max_depth="1" }}
-        <li class="{{ if children }}has-dropdown{{ endif }}">
-          <a href="{{ url }}" class="button {{ if is_current || is_parent }}active{{ endif }} ">
-            {{ title }}
-          </a>
-          {{ if children }}
-          <ul class="dropdown">
-            {{ children }}
-              <li><a href="{{ url }}"{{ if is_current }}active{{ endif }}>{{ title }}</a></li>
-            {{ /children }}
-          </ul>
+        {{ nav from="/" max_depth="2"}}
+        <li>
+          {{ unless children }}
+            <a href="{{ url }}" class="button {{ if is_current || is_parent }}secondary{{ endif }}">
+              {{ title }}{{ count }}
+            </a>
+          {{ else }}
+            <a href="{{ url }}" class="button split {{ if is_current || is_parent }}secondary{{ endif }}">
+              {{ title }}{{ count }}<span data-dropdown="{{title|lower|slugify}}"></span>
+            </a><br>
+            <ul id="{{title|lower|slugify}}" data-dropdown-content class="f-dropdown">
+              {{ children }}
+                <li><a href="{{ url }}"{{ if is_current }}active{{ endif }}>{{ title }}</a></li>
+              {{ /children }}
+            </ul>
           {{ endif }}
         </li>
         {{ /nav }}
       </ul>
     </div>
-    <h1>{{ _site_name }}</h1>
+    <h2><a href="/">{{ _site_name }}</a></h2>
     <hr />
   </div>
-</div
+</div>

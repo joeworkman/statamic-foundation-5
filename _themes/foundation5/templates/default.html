@@ -1,8 +1,35 @@
-<section role="main">
-  {{ if alt_title }}
-  <h2>{{ alt_title }}</h2>
-  {{ else }}
-  <h2>{{ title }}</h2>
-  {{ endif }}
-  {{ content }}
-</section><!-- END role="main" -->
+{{ entries:listing folder="blog" limit="10" }}
+<div class="row">
+
+  <article class="large-12 columns" role="content">
+    <header>
+      <h2>
+        <a href="{{ url }}">{{ title }}</a>
+        <small> {{ datestamp format="F jS, Y" }}</small>
+      </h2>
+    </header>
+    {{ content }}
+    {{ if categories }}
+    <p> Filed under {{ categories_url_list }}.</p>
+    {{ endif }}
+  </article>
+
+</div>
+{{ /entries:listing }}
+
+{{ entries:pagination folder="blog" limit="10"}}
+<div class="row">
+  <ul class="pagination">
+    {{ if previous_page }}
+      <li><a href="{{ previous_page }}">&laquo; Previous Page</a></li>
+    {{ else }}
+      <li class="unavailable"><a href="">&laquo; Previous Page</a></li>
+    {{ endif }}
+    {{ if next_page }}
+      <li><a href="{{ previous_page }}">Next Page &raquo;</a></li>
+    {{ else }}
+      <li class="unavailable"><a href="">Next Page &raquo;</a></li>
+    {{ endif }}
+  </ul>
+  {{ /entries:pagination }}
+</div>

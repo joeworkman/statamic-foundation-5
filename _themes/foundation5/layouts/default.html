@@ -16,11 +16,15 @@
 
     <script src="{{ theme:asset src="bower_components/jquery/jquery.js" }}"></script>
     <script src="{{ theme:asset src="bower_components/foundation/js/foundation.min.js" }}"></script>
+    {{ if include_maps }}
+      {{ location:start_maps }}
+    {{ endif }}
     <script>
       $(document).foundation();
 
       var doc = document.documentElement;
       doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
+    
   </body>
 </html>

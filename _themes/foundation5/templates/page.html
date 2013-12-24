@@ -1,14 +1,18 @@
-<section role="main">
-  {{ if alt_title }}
-  <h2>{{ alt_title }}</h2>
-  {{ else }}
-  <h2>{{ title }}</h2>
-  {{ endif }}
-  {{ content }}
-</section><!-- END role="main" -->
+  <!-- Main Page Content and Sidebar -->
 
-{{ if segment_1 == "" }}
-<section class="articles">
-{{ theme:partial src="_article_listing" fold="{blog_name}" lim="5" tax="no" }}
-</section>
-{{ endif }}
+  <div class="row">
+
+    <div class="large-9 columns" role="content">
+
+      <article>
+        {{ content }}
+      </article>
+
+      <hr />
+    </div>
+
+    {{ theme:partial src="sidebar" }}
+  
+  </div>
+
+  <!-- End Main Content and Sidebar -->
