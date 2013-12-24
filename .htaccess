@@ -1,3 +1,0 @@
-RedirectMatch 403 ^.*/layouts/
-RedirectMatch 403 ^.*/templates/
-RedirectMatch 403 ^.*/partials/
